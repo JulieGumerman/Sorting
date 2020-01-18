@@ -7,7 +7,7 @@ def selection_sort( arr ):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
         if cur_index > arr[i + 1]:
-            arr[i + 1] = cur_index
+            arr[i + 1] = "I got swapped"
 
 
 
