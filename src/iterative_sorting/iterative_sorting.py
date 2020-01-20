@@ -47,5 +47,9 @@ def count_sort( arr, maximum=-1 ):
         for j in range(i + 1, len(arr)):
             if arr[minimum_index] > arr[j]:
                 minimum_index = j
-        arr[i], arr[minimum_index] = arr[minimum_index], arr[i]
+        #arr[i], arr[minimum_index] = arr[minimum_index], arr[i]
+        temp = arr[i]
+        arr[i] = arr[minimum_index]
+        arr[minimum_index] = temp
+
     return arr
