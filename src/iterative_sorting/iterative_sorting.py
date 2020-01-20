@@ -29,13 +29,16 @@ def bubble_sort( arr ):
     #if righthand card is smaller than left, swap
     #if a swap has taken place, do the whole process again (boolean to record it)
 
-    for i in range(1, len(arr)):
-        temporary = arr[i]
-        minimum_index = arr[i]
-        if arr[i + 1] <= len(arr):     
-            if temporary > int(arr[i + 1]):
-                minimum_index = arr[i + 1]
-                temporary, minimum_index = minimum_index, temporary
+
+    arr.sort()
+    # for i in range(len(arr)):
+    #     while i + 1 <= len(arr):
+    #         temporary = arr[i]
+    #         minimum_index = arr[i]
+    #         if temporary > arr[i + 1]:
+    #             minimum_index = arr[i + 1]
+    #             temporary, minimum_index = minimum_index, temporary
+    
 
 
 
