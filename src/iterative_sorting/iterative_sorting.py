@@ -30,18 +30,12 @@ def bubble_sort( arr ):
     #if a swap has taken place, do the whole process again (boolean to record it)
 
 
-    arr.sort()
-    # for i in range(len(arr)):
-    #     while i + 1 <= len(arr):
-    #         temporary = arr[i]
-    #         minimum_index = arr[i]
-    #         if temporary > arr[i + 1]:
-    #             minimum_index = arr[i + 1]
-    #             temporary, minimum_index = minimum_index, temporary
-    
-
-
-
+    for i in range(len(arr)-1,0,-1):
+        for j in range(i):
+            if arr[j] > arr[j+1]:
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
 
     return arr
 
