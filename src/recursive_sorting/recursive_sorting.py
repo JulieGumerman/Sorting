@@ -2,7 +2,7 @@
 
 
 
-# TO-DO: complete the helpe function below to merge 2 sorted arrays
+# TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
@@ -14,20 +14,24 @@ def merge( arrA, arrB ):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-
-    arr = [arr[i:i+2] for i in arr]
-
-    for i in arr:
-        i.sort()
-
-
+    new_arr = []
     
-    #split array into a bunch of tiny arrays with two apiece
-    #put those two-number arrays in order
-    #merge into four; sort
-    #merge; sort one last time
+    middle = len(arr)/2
+    first_half = arr[:int(middle)]
+    second_half = arr[int(middle + 1):]
+    new_arr.append(first_half)
+    new_arr.append(second_half)
 
-    return arr
+
+    while len(new_arr[0]) > 1:
+        middle = len(arr)/2
+        first_half = arr[:int(middle)]
+        second_half = arr[int(middle + 1):]
+        new_arr.append(first_half)
+        new_arr.append(second_half)
+
+
+    return new_arr
 
 
 # STRETCH: implement an in-place merge sort algorithm
