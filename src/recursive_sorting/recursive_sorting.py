@@ -15,19 +15,11 @@ def merge( arrA, arrB ):
 def merge_sort( arr ):
     # TO-DO
 
+    arr = [arr[i:i+2] for i in arr]
+
     for i in arr:
-        if i % 2 == 0:
-            temp = arr[i]
-            temp_two = arr[i + 1]
-            new_arr = []
-            new_arr.append(temp)
-            new_arr.append(temp_two)
-            new_arr.sort()
-            arr.append(new_arr)
-            arr.remove(temp)
-            arr.remove(temp_two)
-            
- 
+        i.sort()
+
 
     
     #split array into a bunch of tiny arrays with two apiece
