@@ -14,24 +14,15 @@ def merge( arrA, arrB ):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-    new_arr = []
-    
-    middle = len(arr)/2
-    first_half = arr[:int(middle)]
-    second_half = arr[int(middle + 1):]
-    new_arr.append(first_half)
-    new_arr.append(second_half)
-
-
-    while len(new_arr[0]) > 1:
-        middle = len(arr)/2
-        first_half = arr[:int(middle)]
-        second_half = arr[int(middle + 1):]
-        new_arr.append(first_half)
-        new_arr.append(second_half)
-
-
-    return new_arr
+    if len(arr) <= 1:
+        return arr
+    else: 
+        left = arr[0: int(len(arr)//2)]
+        right = arr[len(arr)//2:]
+        left_arr = merge_sort(left)
+        right_arr = merge_sort(right)
+        return merge(left_arr, right_arr) 
+    #return arr
 
 
 # STRETCH: implement an in-place merge sort algorithm
